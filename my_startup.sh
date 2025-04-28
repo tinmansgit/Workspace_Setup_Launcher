@@ -3,8 +3,8 @@
 # modify delay time between commands as needed 
 # change programs with program launch paths to fit your setup
 
-DEBUG_LOG="/bin/Bash/Startups/log_my-startup_debug.log"
-ERROR_LOG="/bin/Bash/Startups/log_my-startup_error.log"
+DEBUG_LOG="~/bin/Bash/Startups/log_my-startup_debug.log"
+ERROR_LOG="~/bin/Bash/Startups/log_my-startup_error.log"
 
 log_debug() {echo "$(date '+%Y-%m-%d %H:%M:%S') [DEBUG] $1" >> "$DEBUG_LOG"}
 
@@ -59,7 +59,7 @@ run_command "/usr/bin/xdotool set_desktop 3 &"
 sleep_debug 3
 run_command "/usr/bin/lowriter -o /path/to/your/file.odt &" # opens a specified file in LibreOffice Writer
 sleep_debug 15
-run_command "cd /bin/Python/Countdown_Timer && python3 countdown-timer.py &"
+run_command "cd ~/bin/Python/Countdown_Timer && python3 countdown-timer.py &"
 sleep_debug 15
 log_debug "Workspace 4 setup complete"
 
